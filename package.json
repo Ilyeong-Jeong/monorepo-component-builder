@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ilyeong-Jeong/monorepo-component-list/issues"
   },
-  "homepage": "https://github.com/Ilyeong-Jeong/monorepo-component-list#readme"
+  "homepage": "https://github.com/Ilyeong-Jeong/monorepo-component-list#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }
