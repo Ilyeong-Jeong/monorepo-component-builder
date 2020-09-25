@@ -4,7 +4,8 @@
   "description": "monorepo-component-list",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bootstrap": "yarn install && lerna bootstrap",
+    "test"     : "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
