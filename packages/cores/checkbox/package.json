@@ -1,0 +1,19 @@
+{
+  "name": "checkbox",
+  "version": "0.0.0",
+  "description": "component checkbox",
+  "author": "ilyeongjeong <developjiy@gmail.com>",
+  "homepage": "https://github.com/Ilyeong-Jeong/monorepo-component-list/tree/master/packages/checkbox#readme",
+  "license": "ISC",
+  "main": "dist/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ilyeong-Jeong/monorepo-component-list.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Ilyeong-Jeong/monorepo-component-list/issues"
+  }
+}
