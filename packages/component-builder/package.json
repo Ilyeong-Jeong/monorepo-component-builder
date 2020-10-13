@@ -1,0 +1,17 @@
+{
+  "name": "component-builder",
+  "version": "0.0.0",
+  "description": "component-builder",
+  "license": "ISC",
+  "main": "index.js",
+  "bin": {
+    "component-build": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0"
+  }
+}
