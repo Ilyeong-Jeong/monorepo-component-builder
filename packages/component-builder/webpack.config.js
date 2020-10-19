@@ -1,14 +1,11 @@
 const webpack = require('webpack');
 const path    = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueLoaderPlugin   = require('vue-loader/lib/plugin');
-const UglifyJSPlugin    = require('uglifyjs-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const UglifyJSPlugin  = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-
-  entry: './src/main.js',
 
   output: {
     path      : path.resolve(__dirname, 'dist'),
@@ -33,8 +30,8 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
-      },
-
+      },  
+      
       {
         test: /\.css$/,
         use: [
@@ -67,10 +64,6 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html'
-    }),
     new VueLoaderPlugin(),
     new UglifyJSPlugin()
   ]

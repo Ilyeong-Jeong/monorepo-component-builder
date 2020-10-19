@@ -6,14 +6,11 @@
   "homepage": "https://github.com/Ilyeong-Jeong/monorepo-component-list/tree/master/packages/checkbox#readme",
   "license": "ISC",
   "main": "dist/bundle.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ilyeong-Jeong/monorepo-component-list.git"
-  },
   "scripts": {
+    "build": "component-build build",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "bugs": {
-    "url": "https://github.com/Ilyeong-Jeong/monorepo-component-list/issues"
+  "devDependencies": {
+    "component-builder": "^0.0.0"
   }
 }
