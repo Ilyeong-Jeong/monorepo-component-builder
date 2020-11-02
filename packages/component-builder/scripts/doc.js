@@ -2,7 +2,7 @@ const glob  = require('glob');
 const path  = require("path");
 const fs    = require("fs");
 
-const vuedoc  = require('@vuedoc/md');
+const vuedoc = require('@vuedoc/md');
 
 function generateDoc () {
   return new Promise((resolve, reject) => {

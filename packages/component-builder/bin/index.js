@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 const chalk   = require('chalk');
 const path    = require('path');
@@ -10,6 +12,7 @@ program
 .command('build')
 .description('monorepo component build')
 .option('-nd, --nodoc', 'generate no document')
+.option('-c, --config [path]', 'config file path')
 .action(async function(cmd) {
   console.log(chalk.green("running path : ", path.resolve(".")));
 
@@ -23,3 +26,5 @@ program
     process.exit(1);
   }
 })
+
+program.parse(process.argv);

@@ -88,7 +88,7 @@
       type="checkbox" 
       v-model="check" 
       :disabled="disabled"
-    >
+    />
     <div class="checkbox-inner" :style="style.inner">
       <span class="check" :style="style.check"></span>
     </div>
