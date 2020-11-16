@@ -12,7 +12,6 @@ program
 .command('build')
 .description('monorepo component build')
 .option('-nd, --nodoc', 'generate no document')
-.option('-c, --config [path]', 'config file path')
 .action(async function(cmd) {
   console.log(chalk.green("running path : ", path.resolve(".")));
 

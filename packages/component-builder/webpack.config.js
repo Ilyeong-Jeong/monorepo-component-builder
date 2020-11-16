@@ -10,7 +10,6 @@ module.exports = {
   entry: path.resolve(".", "src/index.js"),
 
   output: {
-    path    : path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
 
@@ -19,17 +18,29 @@ module.exports = {
       path.resolve(".", "src"),
       "node_modules"
     ],
+
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    },
+
+    extensions: ['.js', '.sass', '.vue']
   },
 
   module: {
     rules: [
       {
         test: /\.js$/,
+        exclude: [
+          path.resolve(".", "src"),
+        ],
         loader: 'babel-loader'
       },
 
       {
         test: /\.vue$/,
+        exclude: [
+          path.resolve(".", "src"),
+        ],
         loader: 'vue-loader'
       },  
       
@@ -66,6 +77,6 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
-    new UglifyJSPlugin()
+    // new UglifyJSPlugin()
   ]
 };
