@@ -13,9 +13,16 @@ module.exports = {
     filename: 'bundle.js',
   },
 
+  resolveLoader: {
+    modules: [ path.resolve(__dirname, 'node_modules') ],
+    extensions: [ '.js', '.json' ],
+    mainFields: [ 'loader', 'main' ]
+  },
+
   resolve: {
     modules: [
       path.resolve(".", "src"),
+      path.resolve(".", "node_modules"),
       "node_modules"
     ],
 
@@ -30,16 +37,23 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: [
+        include: [
           path.resolve(".", "src"),
+          /node_modules\/.+\/src/
         ],
-        loader: 'babel-loader'
+        use: {
+          loader: 'babel-loader',
+          options: {
+            rootMode: "upward"
+          }
+        }
       },
 
       {
         test: /\.vue$/,
-        exclude: [
+        include: [
           path.resolve(".", "src"),
+          /node_modules\/.+\/src/
         ],
         loader: 'vue-loader'
       },  
@@ -55,6 +69,10 @@ module.exports = {
 
       {
         test: /\.scss$/,
+        include: [
+          path.resolve(".", "src"),
+          /node_modules\/.+\/src/
+        ],        
         use: [
           'vue-style-loader',
           "css-loader",
