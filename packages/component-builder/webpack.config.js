@@ -95,6 +95,6 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
-    // new UglifyJSPlugin()
+    new UglifyJSPlugin()
   ]
 };
