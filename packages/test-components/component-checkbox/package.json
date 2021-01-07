@@ -1,0 +1,14 @@
+{
+  "name": "component-checkbox",
+  "version": "1.0.0",
+  "description": "component checkbox",
+  "license": "ISC",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "component-build build",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "component-builder": "^1.0.0"
+  }
+}
